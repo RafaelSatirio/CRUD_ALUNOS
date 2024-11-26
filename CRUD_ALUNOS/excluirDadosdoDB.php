@@ -16,8 +16,16 @@ if($registros > 0){
     while($reg_consulta = mysqli_fetch_array($consulta)){
         echo 'Nome : '.$reg_consulta['nome'].'<br>';
         echo 'Telefone : '.$reg_consulta['telefone'].'<br>';
-        echo ''
+        echo 'Sexo : '.$reg_consulta['sexo'].'<br><br>';
     }
+    echo '<a href="excluir.php?rgm=rgm"> Clique aqui para confirmar a 
+                                            Exclusão dos Dados </a> <br><br>';
 }
+else{
+    echo 'Aluno não encontrado <br><br>';
+}
+
+echo '<a href="informaRGMpExcluir.php"> Voltar a tela anterior </a>'.'<br><br>';
+echo '<a href="index.php"> clique aqui para voltar ao Menu </a>';
 
 ?>
